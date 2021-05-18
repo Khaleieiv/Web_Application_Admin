@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApplication3.Models.delivery_order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.order_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.promo.value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.us.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.house)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apartment_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.need_payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.completed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.completion_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stars)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.review)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+    @Html.DisplayFor(modelItem => item.order_id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.promo.value)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.us.username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.street)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.house)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.apartment_number)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.need_payment)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.completed)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.completion_datetime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.stars)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.review)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.order_id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.order_id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.order_id })
+    </td>
+</tr>
+}
+
+</table>

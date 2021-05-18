@@ -1,0 +1,42 @@
+﻿@model WebApplication3.Models.promocode
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>promocode</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.discount_percent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.discount_percent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.promocode_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

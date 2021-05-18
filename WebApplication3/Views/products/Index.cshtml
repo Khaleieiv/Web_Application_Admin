@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebApplication3.Models.product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calories)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proteins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carbohydrates)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>           
+            @{ if (item.image != null)
+                                {
+                                    var base64 = Convert.ToBase64String(item.image);
+                                    var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
+                <img src="@imgsrc" style="max-width: 100px; max-height: 100px;" /> }
+                                else
+                                {
+                @Html.DisplayFor(modelItem => item.image) } }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calories)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proteins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carbohydrates)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.product_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.product_id })
+        </td>
+    </tr>
+}
+
+</table>
