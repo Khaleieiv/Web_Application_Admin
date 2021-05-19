@@ -455,16 +455,16 @@
     <Content Include="Views\order_products\Details.cshtml" />
     <Content Include="Views\order_products\Edit.cshtml" />
     <Content Include="Views\order_products\Index.cshtml" />
-    <Content Include="Views\delivery_order\Create.cshtml" />
-    <Content Include="Views\delivery_order\Delete.cshtml" />
-    <Content Include="Views\delivery_order\Details.cshtml" />
-    <Content Include="Views\delivery_order\Edit.cshtml" />
-    <Content Include="Views\delivery_order\Index.cshtml" />
     <Content Include="Views\order_courier\Create.cshtml" />
     <Content Include="Views\order_courier\Delete.cshtml" />
     <Content Include="Views\order_courier\Details.cshtml" />
     <Content Include="Views\order_courier\Edit.cshtml" />
     <Content Include="Views\order_courier\Index.cshtml" />
+    <Content Include="Views\delivery_order\Create.cshtml" />
+    <Content Include="Views\delivery_order\Delete.cshtml" />
+    <Content Include="Views\delivery_order\Details.cshtml" />
+    <Content Include="Views\delivery_order\Edit.cshtml" />
+    <Content Include="Views\delivery_order\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -77,7 +77,7 @@ namespace WebApplication3.Controllers
                 return HttpNotFound();
             }
             ViewBag.promocode_id = new SelectList(db.promocodes, "promocode_id", "value", delivery_order.promocode_id);
-            ViewBag.user_id = new SelectList(db.user.Where(p => p.role == "courier"), "user_id", "username", delivery_order.user_id);
+            ViewBag.user_id = new SelectList(db.user, "user_id", "username", delivery_order.user_id);
             return View(delivery_order);
         }
 

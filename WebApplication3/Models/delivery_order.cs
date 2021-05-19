@@ -22,7 +22,7 @@ namespace WebApplication3.Models
         public DateTime? completion_datetime { get; set; }
         public int? stars { get; set; }
         public string review { get; set; }
-        public int promocode_id { get; set; }
+        public int? promocode_id { get; set; }
 
         public user us { get; set; }
         public promocode promo { get; set; }
